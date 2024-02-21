@@ -24,5 +24,13 @@ export class UserService {
         return signInWithPopup(this.auth, new GoogleAuthProvider());
     }
 
+    loginWithX() {
+        return signInWithPopup(this.auth, new TwitterAuthProvider());
+    }
+
+    loginWithGit() {
+        return signInWithPopup(this.auth, new GithubAuthProvider());
+    }
+
     
 }

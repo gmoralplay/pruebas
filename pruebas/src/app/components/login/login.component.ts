@@ -39,4 +39,22 @@ export class LoginComponent {
     })
     .catch(error => console.log(error));
   }
+
+  onLoginX() {
+    this.userService.loginWithX()
+    .then(response=> {
+      console.log(response);
+      this.router.navigate(['/main']);
+    })
+    .catch(error => console.log(error));
+  }
+
+  onLoginGit() {
+    this.userService.loginWithGit()
+    .then(response=> {
+      console.log(response);
+      this.router.navigate(['/main']);
+    })
+    .catch(error => console.log(error));
+  }
 }
